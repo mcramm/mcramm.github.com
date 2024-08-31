@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/github.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 
-    <link rel="stylesheet" href="/assets/css/normalize.css?version=2024-08-31T03:15:33+00:00" />
-    <link rel="stylesheet" href="/assets/css/styles.css?version=2024-08-31T03:15:33+00:00" />
+    <link rel="stylesheet" href="/assets/css/normalize.css?version=2024-08-31T04:01:06+00:00" />
+    <link rel="stylesheet" href="/assets/css/styles.css?version=2024-08-31T04:01:06+00:00" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXZL3L7461"></script>
@@ -26,15 +26,16 @@
     </script>
   </head>
   <body>
-    <div class="nav">
-      <a href="/">mcramm.com</a>
-      <a href="https://twitter.com/cramm" target="_blank" rel="noopener">twitter</a>
-      <a href="mailto:mike@mcramm.com" target="_blank" rel="noopener">email</a>
-      <a href="https://github.com/mcramm" target="_blank" rel="noopener">github</a>
-      <a href="/atom.xml" target="_blank" rel="noopener">rss</a>
-    </div>
-    <div class="wrapper">
-      <h1>Breakout Clone 9: Items</h1>
+    <main>
+      <div class="nav">
+        <a href="/">mcramm.com</a>
+        <a href="mailto:mike@mcramm.com" target="_blank" rel="noopener">email</a>
+        <a href="https://github.com/mcramm" target="_blank" rel="noopener">github</a>
+        <a href="/atom.xml" target="_blank" rel="noopener">rss</a>
+      </div>
+      <div class="wrapper">
+        <h1 class="title">Breakout Clone 9: Items</h1>
+<em class="published-at">2023-04-24</em>
 <p>When a block is destroyed, I want there to be a small chance of an item dropping and falling towards the paddle. If the player's paddle collides with the item, the item's effect is applied to the game. While playing some other breakout-style games, I've seen three kinds of common items that can appear:</p><ul><li>An item that increases the players score (bonus points)</li><li>An item that makes any balls currently on the screen "sticky". If these  balls collide with the paddle, then they'll stick to the paddle, and the player  has the option to move the paddle and release the ball at an advantageous  position.</li><li>An item that spawns a new ball for every ball currently on the screen.</li></ul><p>Let's start with the code for spawning an item, then we can figure out what the items will actually look like and how to implement the logic behind their effects.</p><p>First, in <code>Block.cs</code> we'll add some lines that will call a new <code>DropItem</code> function randomly when a block is destroyed.<pre><code class="cs">  // In Block.cs
   // &#42;NEW&#42; add an attribute that represnts how often an item will drop
   &#91;SerializeField&#93; int percentageChanceOfItemDrop = 30;
@@ -239,11 +240,11 @@ public class Sticky : FallingItem
     }
   }
 </code></pre></p><p>Whew, That was a lot! All that's left now is to create some game objects, find some art to represent our items, and fill in the <code>dropableItems</code> array on <code>GameSession</code>. This is all fairly standard Unity stuff - right click in the Hierarchy window and create a 2D sprite object, assign a Script component, assign a sprite, etc. Surprisingly the hardest part was actually deciding on sprites that represent our multi-ball, sticky, and bonus points items. </p><p>I decided to keep it simple and pick some letters. I found some <a href='https://opengameart.org/content/8-bit-personalized-alphabet-only-letter'>8-bit letters on OpenGameArt</a> and chose the M, S, and B letters:</p><p><div>   <img width="100%" src="/assets/images/breakout_items_2023_04_10.png"></img> </div></p><p>And that's it! Here are the item drops working in all their glory:</p><p><div>   <img width="100%" src="/assets/images/breakout_items_2023_04_10.gif"></img> </div></p>
-<div><em>Published: 2023-04-24</em></div>
 
 
 
-    </div>
+      </div>
+    </main>
     <script>
       document.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('pre code').forEach((el) => {
