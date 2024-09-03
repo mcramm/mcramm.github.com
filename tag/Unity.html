@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/github.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 
-    <link rel="stylesheet" href="/assets/css/normalize.css?version=2024-09-03T03:01:48+00:00" />
-    <link rel="stylesheet" href="/assets/css/styles.css?version=2024-09-03T03:01:48+00:00" />
+    <link rel="stylesheet" href="/assets/css/normalize.css?version=2024-09-03T23:38:33+00:00" />
+    <link rel="stylesheet" href="/assets/css/styles.css?version=2024-09-03T23:38:33+00:00" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXZL3L7461"></script>
@@ -132,6 +132,9 @@
     </main>
     <script>
       document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre').forEach((el) => {
+          el.classList.add("theme-atom-one");
+        });
         document.querySelectorAll('pre code').forEach((el) => {
           hljs.highlightElement(el);
         });

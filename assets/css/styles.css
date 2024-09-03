@@ -13,29 +13,30 @@ body {
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
-  line-height: 1.45;
-  background-color: rgba(237, 237, 237, 0.33);
+  line-height: 1.7em;
   padding: 2em 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(237, 237, 237, 0.33);
+  color: rgba(15, 15, 15, 1);
 }
 
 a {
-  color: #2077B2;
   text-decoration: none;
   transition: all 0.2s ease;
+  color: #2077B2;
 }
 
 a:visited {
   text-decoration: none;
-  color: #2077B2;
   transition: all 0.2s ease;
+  color: #2077B2;
 }
 
 a:hover {
-  color: #154D73;
   text-decoration: underline;
+  color: #154D73;
 }
 
 main {
@@ -46,6 +47,7 @@ h1.title {
   margin-bottom: 0;
   font-family: geist-variable;
   font-weight: 500;
+  font-size: 40px;
 }
 
 ul.posts {
@@ -88,6 +90,7 @@ div.tags li {
 }
 
 div.tags p {
+  font-weight: bold;
   margin: 0 0 0.5em;
 }
 
@@ -105,18 +108,19 @@ div.nav a:first-child {
   margin: 0 0.5em 0 0;
   font-size: 2.0em;
   white-space: none;
-  color: black;
+  color: #000;
 }
 
-p {
-  line-height: 1.5em;
+code {
+  background-color: #FFF;
+  padding: 2px;
 }
 
 pre code.hljs {
   padding: 1px 3px;
   overflow-x: scroll;
-  background-color: #FFFFFF;
   font-size: 16px;
+  background-color: #FFFFFF;
 }
 
 p code {
@@ -124,9 +128,9 @@ p code {
 }
 
 div#mc_embed_signup {
-  background-color: #f4f4ed;
   margin-top: 10px;
   padding: 5px 0;
+  background-color: #f4f4ed;
 }
 
 div#mc_embed_signup form {
@@ -152,11 +156,11 @@ div.mc-field-group input.email {
 }
 
 input#mc-embedded-subscribe {
-  background-color: #2AC141;
-  color: white;
   border-radius: 2px;
   border: none;
   margin-top: 5px;
+  background-color: #2AC141;
+  color: white;
 }
 
 input#mc-embedded-subscribe:hover {
@@ -170,4 +174,48 @@ div.optionalParent {
 
 p.brandingLogo img {
   width: 170px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgba(23, 23, 23, 1);
+    color: rgba(213, 213, 213, 1);
+  }
+
+  h1.title {
+    color: rgba(225, 225, 225, 1);
+  }
+  
+  a {
+    color: rgba(243, 243, 243, 1);
+  }
+
+  a:visited {
+    color: rgba(243, 243, 243, 1);
+  }
+
+  a:hover {
+    color: rgba(210, 210, 210, 1);
+  }
+
+  em.published-at {
+    color: gray;
+  }
+
+  div.nav a, div.tags a, div.tags p {
+    color: rgba(162, 162, 162, 1);
+  }
+
+  pre code.hljs {
+    background-color: #000;
+  }
+
+  div#mc_embed_signup {
+    background-color: #f4f4ed;
+  }
+
+  input#mc-embedded-subscribe {
+    background-color: #2AC141;
+    color: white;
+  }
 }
