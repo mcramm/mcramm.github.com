@@ -206,6 +206,10 @@ p.brandingLogo img {
     color: rgba(162, 162, 162, 1);
   }
 
+  code {
+    background-color: #000;
+  }
+
   pre code.hljs {
     background-color: #000;
   }
