@@ -111,22 +111,6 @@ div.nav a:first-child {
   color: #000;
 }
 
-code {
-  background-color: #FFF;
-  padding: 2px;
-}
-
-pre code.hljs {
-  padding: 1px 3px;
-  overflow-x: scroll;
-  font-size: 16px;
-  background-color: #FFFFFF;
-}
-
-p code {
-  font-size: 15px;
-}
-
 div#mc_embed_signup {
   margin-top: 10px;
   padding: 5px 0;
@@ -202,16 +186,8 @@ p.brandingLogo img {
     color: gray;
   }
 
-  div.nav a, div.tags a, div.tags p {
+  div.nav a, div.nav a:first-child, div.tags a, div.tags p {
     color: rgba(162, 162, 162, 1);
-  }
-
-  code {
-    background-color: #000;
-  }
-
-  pre code.hljs {
-    background-color: #000;
   }
 
   div#mc_embed_signup {
